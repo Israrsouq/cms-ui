@@ -41,6 +41,13 @@ const Domains = () => (
   </div>
 );
 
+const Database = () => (
+  <div className="p-8 text-center">
+    <h1 className="text-2xl font-bold mb-4">Database Management</h1>
+    <p className="text-muted-foreground">This page will be implemented next.</p>
+  </div>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
