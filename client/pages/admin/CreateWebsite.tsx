@@ -263,7 +263,7 @@ export default function CreateWebsite() {
                 Quick Create
               </Button>
             </DialogTrigger>
-            <DialogContent className="max-w-2xl bg-background text-foreground border border-border">
+            <DialogContent className="max-w-5xl bg-background text-foreground border border-border">
               <DialogHeader>
                 <DialogTitle>Create New Website</DialogTitle>
                 <DialogDescription>
