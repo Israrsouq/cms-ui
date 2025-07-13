@@ -47,7 +47,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
 import {
-  Users,
+  Users as UsersIcon,
   Plus,
   Trash2,
   Edit,
