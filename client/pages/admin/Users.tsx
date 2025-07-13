@@ -360,12 +360,7 @@ export default function Users() {
                     <TableCell>
                       <Badge
                         variant={
-                          user.status === "ACTIVE" ? "default" : "destructive"
-                        }
-                        className={
-                          user.status === "ACTIVE"
-                            ? "bg-green-500 hover:bg-green-600"
-                            : ""
+                          user.status === "ACTIVE" ? "secondary" : "destructive"
                         }
                       >
                         {user.status}
