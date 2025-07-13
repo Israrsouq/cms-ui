@@ -115,10 +115,14 @@ export default function Users() {
   const [users, setUsers] = useState<User[]>(mockUsers);
   const [searchTerm, setSearchTerm] = useState("");
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [newUser, setNewUser] = useState({
+  const [newUser, setNewUser] = useState<{
+    name: string;
+    email: string;
+    role: "ADMIN" | "OWNER";
+  }>({
     name: "",
     email: "",
-    role: "OWNER" as const,
+    role: "OWNER",
   });
 
   const filteredUsers = users.filter(
