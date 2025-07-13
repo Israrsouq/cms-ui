@@ -246,6 +246,27 @@ export default function Users() {
                     </SelectContent>
                   </Select>
                 </div>
+
+                {/* Email Invitation Option */}
+                <div className="flex items-center justify-between p-4 border rounded-lg bg-blue-50 dark:bg-blue-900/20">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-blue-600" />
+                    <div>
+                      <Label className="text-sm font-medium">
+                        Send Invitation Email
+                      </Label>
+                      <p className="text-xs text-muted-foreground">
+                        Send account setup instructions to the user's email
+                      </p>
+                    </div>
+                  </div>
+                  <Switch
+                    checked={newUser.sendInvitation}
+                    onCheckedChange={(checked) =>
+                      setNewUser({ ...newUser, sendInvitation: checked })
+                    }
+                  />
+                </div>
               </div>
               <DialogFooter>
                 <Button
