@@ -211,8 +211,11 @@ export default function Users() {
                   <Label htmlFor="role">Role</Label>
                   <Select
                     value={newUser.role}
-                    onValueChange={(value: "ADMIN" | "OWNER") =>
-                      setNewUser({ ...newUser, role: value })
+                    onValueChange={(value) =>
+                      setNewUser({
+                        ...newUser,
+                        role: value as "ADMIN" | "OWNER",
+                      })
                     }
                   >
                     <SelectTrigger>
