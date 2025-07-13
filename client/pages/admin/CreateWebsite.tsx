@@ -368,6 +368,72 @@ export default function CreateWebsite() {
                     }
                   />
                 </div>
+
+                {/* Owner Invitation Section */}
+                <div className="space-y-4 border-t pt-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <Label className="text-base font-semibold">
+                        Invite Website Owner
+                      </Label>
+                      <p className="text-sm text-muted-foreground">
+                        Send an invitation to someone to manage this website
+                      </p>
+                    </div>
+                    <Switch
+                      checked={newWebsite.sendInvitation}
+                      onCheckedChange={(checked) =>
+                        setNewWebsite({
+                          ...newWebsite,
+                          sendInvitation: checked,
+                        })
+                      }
+                    />
+                  </div>
+
+                  {newWebsite.sendInvitation && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <div className="space-y-2">
+                        <Label htmlFor="owner-name">Owner Name</Label>
+                        <Input
+                          id="owner-name"
+                          placeholder="John Doe"
+                          value={newWebsite.ownerName}
+                          onChange={(e) =>
+                            setNewWebsite({
+                              ...newWebsite,
+                              ownerName: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="owner-email">Owner Email</Label>
+                        <Input
+                          id="owner-email"
+                          type="email"
+                          placeholder="john@example.com"
+                          value={newWebsite.ownerEmail}
+                          onChange={(e) =>
+                            setNewWebsite({
+                              ...newWebsite,
+                              ownerEmail: e.target.value,
+                            })
+                          }
+                        />
+                      </div>
+                      <div className="md:col-span-2">
+                        <div className="flex items-center gap-2 text-sm text-blue-700 dark:text-blue-300">
+                          <Mail className="w-4 h-4" />
+                          <span>
+                            An invitation email will be sent with website access
+                            and setup instructions
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
               <DialogFooter>
                 <Button
