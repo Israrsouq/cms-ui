@@ -368,6 +368,7 @@ export default function CreateWebsite() {
                         description: e.target.value,
                       })
                     }
+                    className="bg-background border-input"
                   />
                 </div>
 
