@@ -448,11 +448,23 @@ export default function CreateWebsite() {
                   disabled={
                     !newWebsite.name ||
                     !newWebsite.subdomain ||
-                    !selectedTemplate
+                    !selectedTemplate ||
+                    (newWebsite.sendInvitation &&
+                      (!newWebsite.ownerName || !newWebsite.ownerEmail))
                   }
+                  className="gap-2"
                 >
-                  <Zap className="w-4 h-4 mr-2" />
-                  Create Website
+                  {newWebsite.sendInvitation ? (
+                    <>
+                      <Mail className="w-4 h-4" />
+                      Create Website & Send Invitation
+                    </>
+                  ) : (
+                    <>
+                      <Zap className="w-4 h-4" />
+                      Create Website
+                    </>
+                  )}
                 </Button>
               </DialogFooter>
             </DialogContent>
