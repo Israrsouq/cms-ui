@@ -121,10 +121,12 @@ export default function Users() {
     name: string;
     email: string;
     role: "ADMIN" | "OWNER";
+    sendInvitation: boolean;
   }>({
     name: "",
     email: "",
     role: "OWNER",
+    sendInvitation: true,
   });
 
   const filteredUsers = users.filter(
