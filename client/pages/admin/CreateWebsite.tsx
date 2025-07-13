@@ -406,6 +406,7 @@ export default function CreateWebsite() {
                               ownerName: e.target.value,
                             })
                           }
+                          className="bg-background border-input"
                         />
                       </div>
                       <div className="space-y-2">
