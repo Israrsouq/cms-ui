@@ -281,10 +281,10 @@ export default function CreateWebsite() {
                     {templates.map((template) => (
                       <div
                         key={template.id}
-                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all bg-card ${
                           selectedTemplate === template.id
-                            ? "border-primary bg-primary/5"
-                            : "border-border hover:border-primary/50"
+                            ? "border-primary bg-primary/5 shadow-md"
+                            : "border-border hover:border-primary/50 hover:bg-accent/5"
                         }`}
                         onClick={() => {
                           setSelectedTemplate(template.id);
