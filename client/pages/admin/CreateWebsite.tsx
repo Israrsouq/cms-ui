@@ -348,7 +348,7 @@ export default function CreateWebsite() {
                             subdomain: e.target.value,
                           })
                         }
-                        className="rounded-r-none"
+                        className="rounded-r-none bg-background border-input"
                       />
                       <span className="px-3 py-2 bg-muted border border-l-0 rounded-r-md text-sm text-muted-foreground">
                         .cms.com
