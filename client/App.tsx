@@ -13,6 +13,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import Users from "./pages/admin/Users";
 import CreateWebsite from "./pages/admin/CreateWebsite";
 import Domains from "./pages/admin/Domains";
+import Database from "./pages/admin/Database";
 import AdminLayout from "./components/admin/AdminLayout";
 
 const queryClient = new QueryClient();
