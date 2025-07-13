@@ -422,6 +422,7 @@ export default function CreateWebsite() {
                               ownerEmail: e.target.value,
                             })
                           }
+                          className="bg-background border-input"
                         />
                       </div>
                       <div className="md:col-span-2">
