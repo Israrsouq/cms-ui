@@ -226,10 +226,14 @@ export default function Database() {
     null,
   );
   const [sqlQuery, setSqlQuery] = useState("");
-  const [newBackup, setNewBackup] = useState({
+  const [newBackup, setNewBackup] = useState<{
+    name: string;
+    type: "FULL" | "INCREMENTAL" | "SCHEMA";
+    includeTables: string[];
+  }>({
     name: "",
-    type: "FULL" as const,
-    includeTables: [] as string[],
+    type: "FULL",
+    includeTables: [],
   });
 
   const filteredTables = tables.filter((table) =>
