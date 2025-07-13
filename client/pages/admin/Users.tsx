@@ -280,8 +280,19 @@ export default function Users() {
                   variant="gradient"
                   onClick={handleAddUser}
                   disabled={!newUser.name || !newUser.email}
+                  className="gap-2"
                 >
-                  Create User
+                  {newUser.sendInvitation ? (
+                    <>
+                      <Mail className="w-4 h-4" />
+                      Create User & Send Invitation
+                    </>
+                  ) : (
+                    <>
+                      <UserPlus className="w-4 h-4" />
+                      Create User
+                    </>
+                  )}
                 </Button>
               </DialogFooter>
             </DialogContent>
