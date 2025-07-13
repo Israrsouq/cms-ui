@@ -56,6 +56,8 @@ import {
   Play,
   Pause,
   MoreHorizontal,
+  Mail,
+  UserPlus,
 } from "lucide-react";
 
 interface Website {
