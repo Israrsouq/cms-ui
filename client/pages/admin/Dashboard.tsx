@@ -164,9 +164,7 @@ export default function Dashboard() {
                     className={`text-sm font-medium ${
                       stat.changeType === "positive"
                         ? "text-green-600"
-                        : stat.changeType === "negative"
-                          ? "text-red-600"
-                          : "text-muted-foreground"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {stat.change}
