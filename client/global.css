@@ -62,11 +62,11 @@
       hsl(120 100% 40%) 100%
     );
 
-    --sidebar-background: 248 252 255;
+    --sidebar-background: 210 40% 98%;
     --sidebar-foreground: 225 29% 13%;
     --sidebar-primary: 262 80% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 248 100% 97%;
+    --sidebar-accent: 210 40% 96%;
     --sidebar-accent-foreground: 225 29% 13%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 262 80% 50%;
