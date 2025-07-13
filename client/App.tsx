@@ -14,6 +14,33 @@ import Users from "./pages/admin/Users";
 
 const queryClient = new QueryClient();
 
+// Protected Route Component
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+  const userRole = localStorage.getItem("userRole");
+
+  if (!isAuthenticated || userRole !== "admin") {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <>{children}</>;
+};
+
+// Placeholder components for routes not yet implemented
+const CreateWebsite = () => (
+  <div className="p-8 text-center">
+    <h1 className="text-2xl font-bold mb-4">Create Website</h1>
+    <p className="text-muted-foreground">This page will be implemented next.</p>
+  </div>
+);
+
+const Domains = () => (
+  <div className="p-8 text-center">
+    <h1 className="text-2xl font-bold mb-4">Domain Mapping</h1>
+    <p className="text-muted-foreground">This page will be implemented next.</p>
+  </div>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -22,6 +49,39 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/users"
+            element={
+              <ProtectedRoute>
+                <Users />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/create-website"
+            element={
+              <ProtectedRoute>
+                <CreateWebsite />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/domains"
+            element={
+              <ProtectedRoute>
+                <Domains />
+              </ProtectedRoute>
+            }
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
