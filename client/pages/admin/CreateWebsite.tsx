@@ -267,7 +267,8 @@ export default function CreateWebsite() {
               <DialogHeader>
                 <DialogTitle>Create New Website</DialogTitle>
                 <DialogDescription>
-                  Choose a template and configure your new website
+                  Choose a template, configure your new website, and optionally
+                  invite an owner to manage it
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-6">
