@@ -236,10 +236,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="gradient" size="sm" className="hidden sm:flex">
-              <Plus className="w-4 h-4 mr-2" />
-              Quick Create
-            </Button>
+            {/* Page-specific action buttons are handled by each page */}
           </div>
         </header>
 
