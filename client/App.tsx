@@ -31,17 +31,6 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 // Placeholder components for routes not yet implemented
 
-const Domains = () => (
-  <AdminLayout>
-    <div className="p-8 text-center">
-      <h1 className="text-2xl font-bold mb-4">Domain Mapping</h1>
-      <p className="text-muted-foreground">
-        This page will be implemented next.
-      </p>
-    </div>
-  </AdminLayout>
-);
-
 const Database = () => (
   <AdminLayout>
     <div className="p-8 text-center">
