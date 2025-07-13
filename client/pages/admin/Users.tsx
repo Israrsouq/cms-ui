@@ -55,6 +55,7 @@ import {
   UserPlus,
   Shield,
   Crown,
+  Mail,
 } from "lucide-react";
 
 interface User {
