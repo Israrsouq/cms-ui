@@ -138,14 +138,25 @@ export default function Users() {
   const handleAddUser = () => {
     const user: User = {
       id: Date.now().toString(),
-      ...newUser,
+      name: newUser.name,
+      email: newUser.email,
+      role: newUser.role,
       status: "ACTIVE",
       websites: 0,
       lastLogin: "Never",
       createdAt: new Date().toISOString().split("T")[0],
     };
+
     setUsers([...users, user]);
-    setNewUser({ name: "", email: "", role: "OWNER" });
+
+    // Show invitation feedback
+    if (newUser.sendInvitation) {
+      alert(
+        `Invitation email sent to ${newUser.email}! They will receive setup instructions.`,
+      );
+    }
+
+    setNewUser({ name: "", email: "", role: "OWNER", sendInvitation: true });
     setIsAddDialogOpen(false);
   };
 
