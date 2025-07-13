@@ -30,18 +30,7 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };
 
-// Placeholder components for routes not yet implemented
-
-const Database = () => (
-  <AdminLayout>
-    <div className="p-8 text-center">
-      <h1 className="text-2xl font-bold mb-4">Database Management</h1>
-      <p className="text-muted-foreground">
-        This page will be implemented next.
-      </p>
-    </div>
-  </AdminLayout>
-);
+// All routes now implemented
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
