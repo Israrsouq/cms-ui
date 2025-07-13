@@ -352,7 +352,7 @@ export default function Users() {
                         {user.role === "ADMIN" ? (
                           <Crown className="w-3 h-3 mr-1" />
                         ) : (
-                          <Users className="w-3 h-3 mr-1" />
+                          <UsersIcon className="w-3 h-3 mr-1" />
                         )}
                         {user.role}
                       </Badge>
