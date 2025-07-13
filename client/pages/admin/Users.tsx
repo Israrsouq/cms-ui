@@ -199,7 +199,8 @@ export default function Users() {
               <DialogHeader>
                 <DialogTitle>Add New User</DialogTitle>
                 <DialogDescription>
-                  Create a new user account for the CMS platform.
+                  Create a new user account and optionally send them setup
+                  instructions via email.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
