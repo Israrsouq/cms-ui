@@ -189,14 +189,36 @@ export default function CreateWebsite() {
       subdomain: newWebsite.subdomain,
       template: newWebsite.template,
       status: "BUILDING",
-      owner: "Current User",
+      owner: newWebsite.ownerName || "Current User",
       created: new Date().toISOString().split("T")[0],
       lastUpdated: new Date().toISOString().split("T")[0],
       visitors: 0,
     };
 
     setWebsites([...websites, website]);
-    setNewWebsite({ name: "", subdomain: "", description: "", template: "" });
+
+    // Handle owner invitation
+    if (
+      newWebsite.sendInvitation &&
+      newWebsite.ownerEmail &&
+      newWebsite.ownerName
+    ) {
+      alert(
+        `Website created successfully!\n\nInvitation sent to ${newWebsite.ownerName} (${newWebsite.ownerEmail}) to manage "${newWebsite.name}".`,
+      );
+    } else {
+      alert("Website created successfully!");
+    }
+
+    setNewWebsite({
+      name: "",
+      subdomain: "",
+      description: "",
+      template: "",
+      ownerEmail: "",
+      ownerName: "",
+      sendInvitation: false,
+    });
     setSelectedTemplate("");
     setIsQuickCreateOpen(false);
   };
