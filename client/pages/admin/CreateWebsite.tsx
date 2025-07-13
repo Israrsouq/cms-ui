@@ -171,6 +171,9 @@ export default function CreateWebsite() {
     subdomain: "",
     description: "",
     template: "",
+    ownerEmail: "",
+    ownerName: "",
+    sendInvitation: false,
   });
 
   const filteredWebsites = websites.filter(
