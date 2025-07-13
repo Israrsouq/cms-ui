@@ -258,7 +258,7 @@ export default function Users() {
             <CardContent>
               <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold">{users.length}</div>
-                <Users className="w-8 h-8 text-muted-foreground" />
+                <UsersIcon className="w-8 h-8 text-muted-foreground" />
               </div>
             </CardContent>
           </Card>
